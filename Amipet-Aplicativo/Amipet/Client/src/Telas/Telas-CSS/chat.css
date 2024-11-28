@@ -1,0 +1,154 @@
+/* Estilo geral */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #121212;
+  color: white;
+}
+
+/* Contêiner principal */
+.container {
+  width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Título */
+.title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #00aaff;
+}
+
+/* Área do chat */
+.chat {
+  height: 500px;
+  overflow-y: auto;
+  border: 1px solid #333;
+  background-color: #2b2b2b;
+  border-radius: 10px;
+  padding: 10px;
+  display: absolute;
+  flex-direction: column;
+  gap: 10px; /* Espaçamento entre as mensagens */
+  width: 560px;
+  padding-left: 480px;
+}
+
+/* Mensagens */
+.message {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px; /* Espaçamento vertical entre mensagens */
+}
+
+.message.user {
+  align-items: flex-end; /* Alinhar mensagens do usuário à direita */
+}
+
+.message.bot {
+  text-align: center;
+  align-items: flex-start; /* Alinhar mensagens do bot à esquerda */
+}
+
+/* Texto das mensagens */
+.message .text {
+  max-width: 70%;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  word-wrap: break-word;
+  background-color: #444;
+  color: white;
+}
+
+.message.user .text {
+  background-color: #00aaff;
+  color: white;
+}
+
+.message.bot .text {
+  background-color: #2b2b2b;
+  color: white;
+}
+
+/* Input e botão */
+.input-container {
+  display: flex;
+  gap: 10px;
+}
+
+/* Input de texto */
+.input {
+  width: calc(100% - 50px);
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #2b2b2b;
+  color: white;
+  outline: none;
+}
+
+/* Input e botão */
+.input-container {
+  display: flex;
+  gap: 10px;
+}
+
+.button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: #00aaff;
+  color: white;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #0088cc;
+}
+
+/* Botão de voltar */
+.back-button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #444;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  .container {
+    width: 90%;
+  }
+
+  .input {
+    font-size: 0.9rem;
+  }
+
+  .button {
+    width: 40px;
+    height: 40px;
+  }
+}
